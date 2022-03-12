@@ -12,14 +12,14 @@ n = rand() - RAND_MAX / 2;
 /* your code goes there */
 if (n>0)
 {
-printf(n, "is positive");
+printf(int n, "is positive");
 }
-elif (n==0)
+else if (n==0)
 {
-printf(n, "is zero");
+printf(int n, "is zero");
 }
 else
 {
-printf(n, "is negative");
+printf(int n, "is negative");
 }
 return (0);}
