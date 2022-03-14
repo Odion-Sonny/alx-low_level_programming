@@ -1,20 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-/* more headers goes there */
-
 /**
-*main-print alphabets in lowercase
-*Return: 0 if success
-*/
-
-int main()
+ * print_alphabet - function to print alphabet
+ *
+ * Return: no return
+ *
+ */
+int main(void)
 {
-int alpha;
-for (alpha= ‘a’; alpha<= ‘z’; alpha++)
-putchar(alpha);
-putchar (‘\n’);
+int i;
+for (i = 97; i <= 122; i++)
+{
+putchar (i);
+}
+putchar ('\n');
 return (0);
 }
-
-
