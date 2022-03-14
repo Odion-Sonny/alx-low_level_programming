@@ -9,7 +9,7 @@ char i;
 for (i = 'a'; i <= 'z'; i++)
 {
 if (i == 'e' || i == 'q')
-putchar ('\b');
+i++;
 putchar (i);
 }
 putchar ('\n');
