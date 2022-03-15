@@ -13,17 +13,17 @@ int ret = 0;
 if (n > 0)
 {
 ret = 1;
-printf("+");
+putchar('+');
 }
 else if (n == 0)
 {
 ret = 0;
-printf("0");
+putchar('0');
 }
 else
 {
 ret = -1;
-printf("-");
+putchar('-');
 }
 return (ret);
 }
