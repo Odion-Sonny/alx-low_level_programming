@@ -2,28 +2,28 @@
 
 /**
  * print_sign - Check Holberton
- * @c: An input character
- * Description: function returns 1 if the character is a
- * letter, lowercase or uppercase.
- * Return: 1 or 0 in otherwise.
+ * @n: An input number
+ * Description: Tohis function prints the sign of the number
+ * Return: 1 if number is positive, o if number is 0, or
+ * -1 if number is negative
  */
 int print_sign(int n)
 {
-int ret = 0;
-if (n > 0)
-{
-ret = 1;
-putchar('+');
-}
-else if (n == 0)
-{
-ret = 0;
-putchar('0');
-}
-else
-{
-ret = -1;
-putchar('-');
-}
-return (ret);
+  int ret;
+  if (n > 0)
+  {
+    ret = 1;
+    putchar('+');
+  }
+  else if (n == 0)
+  {
+    ret = 0;
+    putchar('0');
+  }
+  else
+  {
+    ret = -1;
+    putchar('-');
+  }
+  return (ret);
 }
