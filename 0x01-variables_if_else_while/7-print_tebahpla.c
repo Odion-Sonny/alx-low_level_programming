@@ -1,22 +1,18 @@
+#include <unistd.h>
 #include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
 /**
- * main - main block
- * Description: prints all single digit numbers of base 10
- * starting from 0, followed by a new line.
- * Return: 0
+ * main - Entry point
+ * Description: prints lowercase alphabets in reverse
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-	char c = 'z';
+	int a;
 
-	while (c >= 'a')
+	for (a = 'z'; a >= 'a'; a--)
 	{
-		putchar(c);
-		c--;
+		putchar(a);
 	}
-
 	putchar('\n');
 	return (0);
 }

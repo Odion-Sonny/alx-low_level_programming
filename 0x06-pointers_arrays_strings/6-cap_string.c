@@ -1,43 +1,32 @@
-#include "holberton.h"
-
+#include "main.h"
 /**
- * *cap_string - capitalize words
- * @str: pointer
- * Return: capitalzied string
+*cap_string - function that capitalize first character of a word
+*@str: string to capitalize
+*Return:returns the capitalized string
 */
-
 char *cap_string(char *str)
 {
-char sep[] = ",\t;\n; .!?\"(){}";
-int flag, i, ii;
+	int index = 0;
 
-for (i = 0; str[i] != '\0'; i++)
-{
-	flag = 0;
+	while (str[++index])
+	{
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
 
-	if (i == 0)
-	{
-		flag = 1;
+		if (str[index - 1] == ' ' ||
+				str[index - 1] == '\t' ||
+				str[index - 1] == '\n' ||
+				str[index - 1] == ',' ||
+				str[index - 1] == ';' ||
+				str[index - 1] == '.' ||
+				str[index - 1] == '!' ||
+				str[index - 1] == '?' ||
+				str[index - 1] == '"' ||
+				str[index - 1] == '(' ||
+				str[index - 1] == ')' ||
+				str[index - 1] == '{' ||
+				str[index - 1] == '}')
+			str[index] -= 32;
 	}
-	else
-	{
-		for (ii = 0; sep[ii] != '\0'; ii++)
-		{
-			if (str[i - 1] == sep[ii])
-			{
-				flag = 1;
-				break;
-			}
-		}
-	}
-
-	if (flag == 1)
-	{
-		if (str[i] <= 'z' && str[i] >= 'a')
-		{
-			str[i] -= ('a' - 'A');
-		}
-	}
-}
-return (str);
+	return (str);
 }

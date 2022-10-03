@@ -1,29 +1,20 @@
-
-#include "holberton.h"
-#include <stdio.h>
-
+#include "main.h"
 /**
- * print_array - print `n` elements of an array of integers
- * @a: int type array pointer
- * @n: int type integer
- * Description: Numbers must be separated by comma and space.
- * Numbers should be displayed in the same order they are stored in array.
- * You can only use _putchar to print.
- */
-
+*print_array - print n element of array
+*@a: array
+*@n: number of elements
+*Return: nothing
+*/
 void print_array(int *a, int n)
 {
-	int i;
+int inc;
+for (inc = 0; inc < n ; inc++)
+{
+if (inc != n - 1)
+printf("%d, ", a[inc]);
+else
+printf("%d", a[inc]);
 
-	i = 0;
-	for (n--; n >= 0; n--, i++)
-	{
-		printf("%d", a[i]);
-		if (n > 0)
-		{
-			printf(", ");
-		}
-	}
-	printf("\n");
-
+}
+printf("\n");
 }

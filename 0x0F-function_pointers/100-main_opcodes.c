@@ -2,38 +2,44 @@
 #include <stdlib.h>
 
 /**
- * main - check the code for Holberton School students.
- * @argc: argument count.
- * @argv: argument vector.
- *
- * Return: Always 0.
- */
+*main -  program that prints the opcodes of its own main function.
+*@argc: number of arguments passed to the program
+*@argv: array of arguments
+*
+*Return: on success, 1 or 2 in case of failure
+*/
+
 int main(int argc, char *argv[])
 {
-	char *opc = (char *) main;
-	int i, nbytes;
 
-	if (argc != 2)
-	{
-		printf("Error\n");
-		exit(1);
-	}
+int index, bytes;
+int (*address)(int, char **) = main;
+unsigned char opcode;
 
-	nbytes = atoi(argv[1]);
+if (argc != 2)
+{
+printf("Error\n");
+exit(1);
+}
 
-	if (nbytes < 0)
-	{
-		printf("Error\n");
-		exit(2);
-	}
+bytes = atoi(argv[1]);
 
-	for (i = 0; i < nbytes; i++)
-	{
-		printf("%02x", opc[i] & 0xFF);
-		if (i != nbytes - 1)
-			printf(" ");
-	}
+if (bytes < 0)
+{
+printf("Error\n");
+exit(2);
+}
 
-	printf("\n");
-	return (0);
+for (index = 0; index <  bytes; index++)
+{
+opcode = *(unsigned char *)address;
+printf("%.2x", opcode);
+
+if (index == bytes - 1)
+continue;
+printf(" ");
+address++;
+}
+printf("\n");
+return (0);
 }

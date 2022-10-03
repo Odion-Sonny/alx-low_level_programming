@@ -1,12 +1,13 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * main - checks my code
  *
- * Return: Always 0.
+ * Return: 0
  */
+
 int main(void)
 {
-    print_most_numbers();
-    return (0);
+	print_most_numbers();
+	return (0);
 }

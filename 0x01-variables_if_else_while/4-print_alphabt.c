@@ -1,22 +1,24 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
- * main - main block
- * Description: Get a random number and check its last digit, compare it with 5
- * Return: 0
+ * main - Entry point
+ * Description: prints lowercase alphabets
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-	char c = 'a';
+	int ch;
 
-	while (c <= 'z')
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		if (c != 'e' && c != 'q')
+		if (ch != 'e' && ch != 'q')
 		{
-			putchar(c);
+			putchar(ch);
 		}
-		c++;
+		else
+		{
+		}
 	}
-
 	putchar('\n');
 	return (0);
 }
