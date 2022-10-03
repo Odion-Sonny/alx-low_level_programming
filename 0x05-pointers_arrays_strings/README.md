@@ -1,1 +1,1 @@
-0x05. C - Pointers, arrays and strings!
+# Learning Pointers, arrays and strings in C

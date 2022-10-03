@@ -1,42 +1,47 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - main block
- * Description: Print all possible combinations of two digits.
- * Numbers must be separated by commas and a space.
- * 01 and 10 are considered as the same combination of the two digits.
- * Print only the smallest combination of two digits.
- * Numbers should be printed in ascending order, with two digits.
- * You can only use `putchar`.
- * You can only use `putchar` up to 5 times.
- * You are not allowed to use any variable of type `char`.
+ * Description: Write a program that prints all possible
+ * different combinations of two digits
+ * Numbers must be separated by ,, followed by a space
+ * The two digits must be different
+ * 01 and 10 are considered the same combination of the two digits 0 and 1
+ * Print only the smallest combination of two digits
+ * Numbers should be printed in ascending order, with two digits
+ * You can only use the putchar function
+ * (every other function (printf, puts, etc…) is forbidden)
+ * You can only use putchar five times maximum in your code
+ * You are not allowed to use any variable of type char
+ * All your code should be in the main function
  * Return: 0
  */
 int main(void)
 {
-	int i, j, k;
+	int c;
+	int d = 0;
 
-	i = 0;
-
-	while (i < 100)
+	while (d < 10)
 	{
-		j = i % 10; /* singles digit */
-		k = i / 10; /* doubles digit */
-
-		if (k < j)
+		c = 0;
+		while (c < 10)
 		{
-			putchar(k + '0');
-			putchar(j + '0');
-
-			if (i < 89)
+			if (d != c && d < c)
 			{
-				putchar(44);
-				putchar(32);
-			}
-		}
+				putchar('0' + d);
+				putchar('0' + c);
 
-		i++;
+				if (c + d != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+
+			c++;
+		}
+		d++;
 	}
 	putchar('\n');
-
 	return (0);
 }

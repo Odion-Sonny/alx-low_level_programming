@@ -1,14 +1,13 @@
-#include "main.h"
-
+#include "holberton.h"
 /**
- * mul - input
- * Description: multiplies 2 numbers
- * @a: first number
- * @b: second number
- * Return: the answer
+ * mul - returns the product of its parameters
+ * @a: int type number
+ * @b: int type number
+ * Return:0
  */
+
 
 int mul(int a, int b)
 {
-	return (a * b);
+return (a * b);
 }

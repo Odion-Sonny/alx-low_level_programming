@@ -1,28 +1,25 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - main block
- * Description: Print all possible combinations fo single-digit numbers.
- * Numbers must be separated by commas and a space.
- * You can only use `putchar` to print to console
- * You can only use `putchar` up to four times.
- * You are not allowed to use any variable of type `char`.
+ * Description: prints all single digit numbers of base 10
+ * starting from 0, followed by a new line.
  * Return: 0
  */
 int main(void)
 {
-	int i = 0;
+	int c = 0;
 
-	while (i < 10)
+	while (c < 10)
 	{
-		putchar(i + '0');
-		if (i < 9)
+		putchar(48 + c);
+		if (c != 9)
 		{
-			putchar(44);
-			putchar(32);
+			putchar(',');
+			putchar(' ');
 		}
-		i++;
+		c++;
 	}
 	putchar('\n');
-
 	return (0);
 }

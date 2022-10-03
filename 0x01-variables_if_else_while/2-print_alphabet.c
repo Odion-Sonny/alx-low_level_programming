@@ -1,17 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
- * main - function to print alphabet
- *
- * Return: no return
- *
+ * main - main block
+ * Description: Get a random number and check its last digit, compare it with 5
+ * Return: 0
  */
 int main(void)
 {
-int i;
-for (i = 97; i <= 122; i++)
-{
-putchar (i);
-}
-putchar ('\n');
-return (0);
+	char c = 'a';
+
+	while (c <= 'z')
+	{
+		putchar(c);
+		c++;
+	}
+
+	putchar('\n');
+	return (0);
 }

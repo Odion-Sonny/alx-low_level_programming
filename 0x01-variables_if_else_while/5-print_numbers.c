@@ -1,15 +1,22 @@
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 /**
-* main - function to print alphabet
-* Return: no return
-*/
+ * main - main block
+ * Description: prints all single digit numbers of base 10
+ * starting from 0, followed by a new line.
+ * Return: 0
+ */
 int main(void)
 {
-int a;
-for (a = 0; a < 10; a++)
-{
-printf("%d", a);
-}
-printf("\n");
-return (0);
+	char c = '0';
+
+	while (c <= '9')
+	{
+		putchar(c);
+		c++;
+	}
+
+	putchar('\n');
+	return (0);
 }

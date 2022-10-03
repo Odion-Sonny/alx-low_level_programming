@@ -1,1 +1,1 @@
-Project of C, about Hash Tables.
+# Hash tables

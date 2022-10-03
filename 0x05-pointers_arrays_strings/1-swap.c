@@ -1,15 +1,14 @@
-#include "main.h"
+#include "holberton.h"
 /**
-* swap_int - swaps the values
-*@a: pointer to a
-*@b: ponter to b
-*Return: Nothing
+ * swap_int - swap variable values
+ * @a: pointer 1
+ * @b: pointer 2
+ * Return: void
 */
+
 void swap_int(int *a, int *b)
 {
-	int aux;
-
-	aux = *a;
-	*a = *b;
-	*b = aux;
+*a += *b;
+*b = *a - *b;
+*a = *a - *b;
 }
